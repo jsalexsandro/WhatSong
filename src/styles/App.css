@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 22px;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+.nav {
+    width: 100vw;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.house {
+    color: #00da00;
+    margin-right: 20px;
+    font-size: 28px;
+}
+
+.house:hover {
+    color: #00ca00;
+
+}
+.house:active{
+    color: #01b601;
+
+}
+
+.textMenuSp,
+.textMenu {
+    color: #00da00;
+    font-size: 36px;
+    margin-left: 20px;
+}
+.textMenuSp {
+    color: #00c400;
+    margin-left: 0;
+}
+
+.header {
+    transition: 0.2s;
+}
+
+
+.view {
+    width: 100vw;
+    height: calc(80vh - 80px);
+    background-color: #f1f1f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transition: 0.2s;
+}
+
+h2 {
+    height: auto;
+    text-align: center;
+    color: #00ca00;
+    margin-right: 5px;
+    font-size: 6vh;
+}
+
+.content {
+    margin-top: 10px;
+    font-size:3.5vh;
+    color: #00da00;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    
+}
+.init2,
+.init {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #00ca00;
+    border: 0;
+    padding: 15px 10px 15px 10px;
+    color: #fff;
+    border-radius:4px ;
+    flex-wrap: wrap;
+    outline: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.init2 {
+    border: 2px solid #00ca00;
+    background-color: transparent;
+    color: #00c400;
+}
+
+.init:hover {
+    color: #fff;
+}
+.init:active {
+    color: #fff;
+}
+
+.init:hover {
+    background-color: #00c400;
+}
+.init:active {
+    background-color: #01b601;
+}
+
+
+footer {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: #ffffff;
+    top: calc(100vh - 60px);
+}
+
+a {
+    color: #00c400;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a::before {
+    position: absolute;
+    content: "";
+    background-color: #00c400;
+    width:220px;
+    height: 2px;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%,0) scale(0);
+    transition: 0.2s ease-in-out;
+}
+
+a:hover::before {
+    transform: translate(-50%,0) scale(1);
+    
+}
+
+a:active::before {
+    transform: translate(-50%,0) scale(1);
+}
