@@ -1,0 +1,17 @@
+.view-game {
+    background-color: #242424;
+    width: 100vw;
+    height: calc(100vh - 140px);
+    animation: view-game 0.1s forwards;
+}
+
+
+@keyframes view-game {
+    from {
+        margin-left: -100vw;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}

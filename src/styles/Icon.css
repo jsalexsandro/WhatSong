@@ -1,0 +1,48 @@
+.icon-div {
+    width:180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #006af5;
+    border-radius: 50%;
+    margin: 0px auto 150px auto;
+    margin-top: 20px;
+    animation: anim- 2s;
+}
+
+.icon-div:active {
+    animation: anim-2 1s;
+}
+
+@keyframes icon- {
+    from {
+        left: -100vw;
+    }
+}
+
+@keyframes anim-2 {
+
+    50% {
+        box-shadow: 0px 0px 40px #006af5;
+    }
+    100% {
+        box-shadow: 0px 0px 0px;
+    }
+}
+
+@keyframes anim- {    
+    50% {
+        box-shadow: 0px 0px 40px #006af5;
+    }
+    100% {
+        box-shadow: 0px 0px 0px;
+    }
+}
+
+
+
+.icon {
+    font-size: max(8vw,100px);
+    color: #242424;
+}
