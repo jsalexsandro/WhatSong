@@ -9,7 +9,8 @@ export const Escute = (props) => {
     const [musicPage,setMusicPage] = useState(0)
     const [page,setPage] = useState(0)
     
-    
+    const set = props.set
+
     const level = props.level
     const type = props.type
     
@@ -67,9 +68,10 @@ export const Escute = (props) => {
                         musicPage < max ? (<button onClick={() => setMusicPage(musicPage + 1)} className="button-escute">
                             Proxima
                         </button>) : null
-                    }{
+                    }
+                    {
                         musicPage == max ? (
-                            <button   className="button-escute">
+                            <button  onClick={() =>{ set(1)}} className="button-escute">
                                 Continuar
                             </button>
                         ) :null
