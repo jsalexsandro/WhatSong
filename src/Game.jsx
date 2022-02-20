@@ -2,7 +2,6 @@ import { useState } from "react"
 import { Escute } from "./Escute"
 import "./styles/ViewGame.css"
 
-
 function Gamming(){
     return (
         <div>
