@@ -19,7 +19,7 @@ export const C_R_E = {
         src:"/musics/acords/C.mp3"
     },
     "1":{ 
-        value:"R",
+        value:"D",
         src:"/musics/acords/D.mp3"
     },
     "2":{
@@ -32,11 +32,11 @@ export const C_R_E = {
 export const F_G = {
     "size":1,
     "0":{
-        value:"C",
+        value:"F",
         src:"/musics/acords/F.mp3"
     },
     "1":{ 
-        value:"R",
+        value:"G",
         src:"/musics/acords/G.mp3"
     }
 }
@@ -45,11 +45,11 @@ export const F_G = {
 export const A_B = {
     "size":1,
     "0":{
-        value:"C",
+        value:"A",
         src:"/musics/acords/A.mp3"
     },
     "1":{ 
-        value:"R",
+        value:"B",
         src:"/musics/acords/B.mp3"
     }
 }

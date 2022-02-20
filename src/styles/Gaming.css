@@ -1,0 +1,55 @@
+.gaming {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #242424;
+    width: 100vw;
+    height: calc(100vh - 140px);
+    animation: gaming 0.1s forwards;
+}
+
+@keyframes gaming {
+    from {
+        margin-left: -100vw;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+
+.gaming-buttons {
+    width: 100vw;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gaming-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
+    padding:0 40px 0 40px;
+    height: 60px;
+    background-color: transparent;
+    background-image: linear-gradient(to left,#006af5,#006af5);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    border: 2px solid #006af5;
+    color: #006af5;
+    border-radius: 5px;
+    transition: 0.1s ease-in-out;
+    text-transform: uppercase;
+}
+
+
+.gaming-button:active,
+.gaming-button:hover {
+    background-size: 100% 100%;
+    color: #242424;
+}

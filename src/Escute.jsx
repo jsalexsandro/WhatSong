@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { PlayMusic } from "./components/PlayMusic"
+// import { PlayMusic } from "./components/PlayMusic"
 import { Song } from "./components/Song"
 import { A_B, C_R_E,F_G } from "./list"
 import "./styles/Escute.css"

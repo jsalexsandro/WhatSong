@@ -5,6 +5,15 @@
     font-size: 22px;
 }
 
+::-webkit-scrollbar {
+    background-color: #333;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0e0e0e;
+}
+
 body {
     background-color: #242424;
 }

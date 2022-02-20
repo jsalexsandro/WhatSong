@@ -1,12 +1,5 @@
 import "./styles/Select.css"
 
-
-// function HR(){
-//     return <span className="line">
-
-//     </span>
-// }
-
 function Info(props){
     return (
         <div className="info">
