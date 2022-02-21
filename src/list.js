@@ -1,5 +1,3 @@
-import { Game } from "./Game"
-
 export const AcordsList = [
     {text:"Acordes Maiores ",type:"info"},
     {text:"C D E",component:0},

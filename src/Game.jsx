@@ -40,9 +40,19 @@ export const Game = function(props){
             return l[n].value
         }
 
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        let rand = getRandomInt(0,max + 1)
+        
+
         return (
             <div className="gaming">
                 <Song src=""/>
+                {rand}
                 <div className="gaming-buttons">
                     { 
                         maxList.reverse().map((c) => {
