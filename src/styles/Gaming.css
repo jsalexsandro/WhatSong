@@ -53,3 +53,12 @@
     background-size: 100% 100%;
     color: #242424;
 }
+
+.game-level {
+    color: #006af5;
+    position: absolute;
+    top:85px;
+    left: 20px;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+}

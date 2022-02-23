@@ -1,8 +1,8 @@
 export const AcordsList = [
     {text:"Acordes Maiores ",type:"info"},
     {text:"C D E",component:0},
-    {text:"F G",component:1},
-    {text:"A B",component:2},
+    {text:"E F G",component:1},
+    {text:"G A B",component:2},
     {text:"Acordes Menores ",type:"info"},
     {text:"Cm Dm Em",component:3},
     {text:"Fm Gm",component:4},
@@ -28,12 +28,16 @@ export const C_R_E = {
 
 
 export const F_G = {
-    "size":1,
-    "0":{
+    "size":2,
+    "":{
+        value:"E",
+        src:"/musics/acords/E.mp3"
+    },
+    "1":{
         value:"F",
         src:"/musics/acords/F.mp3"
     },
-    "1":{ 
+    "2":{ 
         value:"G",
         src:"/musics/acords/G.mp3"
     }
@@ -41,12 +45,16 @@ export const F_G = {
 
 
 export const A_B = {
-    "size":1,
-    "0":{
+    "size":2,
+    "0":{ 
+        value:"G",
+        src:"/musics/acords/G.mp3"
+    },
+    "1":{
         value:"A",
         src:"/musics/acords/A.mp3"
     },
-    "1":{ 
+    "2":{ 
         value:"B",
         src:"/musics/acords/B.mp3"
     }

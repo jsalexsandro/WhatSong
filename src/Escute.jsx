@@ -35,15 +35,15 @@ export const Escute = (props) => {
     function MusicState(count){
         if (type == "acord"){
             if (level == 0){
-                var a = C_R_E[count].src
+                var a = C_R_E[count]
                 return a
             } 
             if (level == 1){
-                var a = F_G[count].src
+                var a = F_G[count]
                 return a
             } 
             if (level == 2){
-                var a = A_B[count].src
+                var a = A_B[count]
                 return a
             } 
         }
@@ -51,11 +51,14 @@ export const Escute = (props) => {
 
 
     function DivEscute(props){
-        var src = MusicState(musicPage)
-
+        var src = MusicState(musicPage).src
+        var name = MusicState(musicPage).value
         return (
             <div className="div-escute">
                 <Song src={src} />
+                <p className="view-text">
+                    {name}
+                </p>
                 <div className="div-buttons-escute">
                     {
                         musicPage > 0 ? (

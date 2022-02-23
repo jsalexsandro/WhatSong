@@ -10,6 +10,13 @@
 }
 
 
+.view-text {
+    color: #006af5;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
 
 .div-buttons-escute {
     width: 100vw;

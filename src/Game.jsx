@@ -9,10 +9,11 @@ export const Game = function(props){
     const level = props.level
     const type = props.type
     const [page,setPage] = useState(0)
+    const [game,setGame] = useState(1)
+    const [gLevel,setGlevel] = useState(1)
 
-    
     function Gamming(){
-        
+
         function getLevel(){
             if (type == "acord"){
                 if (level == 0){
@@ -40,6 +41,23 @@ export const Game = function(props){
             return l[n].value
         }
 
+        function MusicState(count){
+            if (type == "acord"){
+                if (level == 0){
+                    var a = C_R_E[count]
+                    return a
+                } 
+                if (level == 1){
+                    var a = F_G[count]
+                    return a
+                } 
+                if (level == 2){
+                    var a = A_B[count]
+                    return a
+                } 
+            }
+        }
+
         function getRandomInt(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
@@ -48,16 +66,30 @@ export const Game = function(props){
 
         let rand = getRandomInt(0,max + 1)
         
+        const src  = MusicState(rand).src
 
         return (
             <div className="gaming">
-                <Song src=""/>
-                {rand}
+                <p className="game-level">
+                    {
+                        gLevel + "/30"
+                    }
+                    
+                </p>
+                <Song src={src} />
                 <div className="gaming-buttons">
                     { 
                         maxList.reverse().map((c) => {
                             return (
-                                <button className="gaming-button" >
+                                <button onClick={
+                                    () => {
+                                        if (c == rand){
+                                            console.log("Sim")
+                                            setGlevel(gLevel + 1)
+                                            setGame(game + 1)
+                                        }
+                                    }
+                                } className="gaming-button" >
                                     {getName(c)}
                                 </button>
                             )
@@ -74,7 +106,13 @@ export const Game = function(props){
                 page == 0 ? (
                     <Escute set={setPage} level={level} type={type} />
                 ) : (
-                    <Gamming />
+                    (game != 0 ? (
+                        (
+                            gLevel <= 30 ? (
+                                <Gamming />
+                            ): null
+                        )
+                    ) :null )
                 )
             }
         </div>
