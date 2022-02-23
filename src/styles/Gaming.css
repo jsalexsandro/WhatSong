@@ -55,10 +55,34 @@
 }
 
 .game-level {
-    color: #006af5;
+    color: #0061e1;
     position: absolute;
     top:85px;
-    left: 20px;
+    left: 15px;
     padding: 2px 5px 2px 5px;
     border-radius: 5px;
+}
+
+.view-text {
+    color: #1a4c8d;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+.hearts {
+    position: absolute;
+    top: 80px;
+    left: calc(100vw - 95px);
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40px;
+    color: #0061e1;
+}
+
+.heart {
+    font-size: 22px;
 }

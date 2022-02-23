@@ -10,7 +10,11 @@ export const Game = function(props){
     const type = props.type
     const [page,setPage] = useState(0)
     const [game,setGame] = useState(1)
+    const [er,setEr] = useState(0)
     const [gLevel,setGlevel] = useState(1)
+
+    const heart = ["fa-solid fa-heart","fa-solid fa-heart","fa-solid fa-heart",]
+    const [hearts,setHearts] = useState([...heart])
 
     function Gamming(){
 
@@ -76,6 +80,29 @@ export const Game = function(props){
                     }
                     
                 </p>
+                <div className="hearts">
+                    {
+                        
+                        (() => {
+                            if (er == 0){
+                                return <>
+                                    {<i className="fa-solid fa-heart heart"></i>}
+                                    {<i className="fa-solid fa-heart heart"></i>}
+                                    {<i className="fa-solid fa-heart heart"></i>}
+                                </>
+                            } else if (er == 1 ){
+                                return <>
+                                    {<i className="fa-solid fa-heart heart"></i>}
+                                    {<i className="fa-solid fa-heart heart"></i>}
+                                </>
+                            } else if (er == 2) {
+                                return <>
+                                    {<i className="fa-solid fa-heart heart"></i>}
+                                </>
+                            }
+                        })()
+                    }
+                </div>
                 <Song src={src} />
                 <div className="gaming-buttons">
                     { 
@@ -87,6 +114,8 @@ export const Game = function(props){
                                             console.log("Sim")
                                             setGlevel(gLevel + 1)
                                             setGame(game + 1)
+                                        } else {
+                                            setEr(er + 1)
                                         }
                                     }
                                 } className="gaming-button" >
@@ -107,11 +136,11 @@ export const Game = function(props){
                     <Escute set={setPage} level={level} type={type} />
                 ) : (
                     (game != 0 ? (
-                        (
+                       ( er <= 2 ? (
                             gLevel <= 30 ? (
                                 <Gamming />
                             ): null
-                        )
+                        ) : "Você perdeu!")
                     ) :null )
                 )
             }
