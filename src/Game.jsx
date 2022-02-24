@@ -1,6 +1,7 @@
 import { useState } from "react"
-import { Escute   } from "./Escute"
-import { Song     } from "./components/Song"
+import { Escute } from "./Escute"
+import { Song } from "./components/Song"
+import GameOver from "./GameOver"
 import { A_B, C_R_E,F_G } from "./list"
 import "./styles/ViewGame.css"
 import "./styles/Gaming.css"
@@ -140,7 +141,12 @@ export const Game = function(props){
                             gLevel <= 30 ? (
                                 <Gamming />
                             ): null
-                        ) : "Você perdeu!")
+                        ) : <GameOver set={
+                            () => {
+                                setEr(0)
+                                setGlevel(0)
+                            }
+                        } />)
                     ) :null )
                 )
             }
